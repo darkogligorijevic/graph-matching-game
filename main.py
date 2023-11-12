@@ -51,9 +51,9 @@ class MainWindow(QWidget):
         self.axis_widget = AxisWidget(self)
         self.axis_widget.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
-        self.x_label = QLabel("X:")
-        self.y_label = QLabel("Y:")
-        self.z_label = QLabel("Z:")
+        self.x_label = QLabel("X (Crvena):")
+        self.y_label = QLabel("Y (Zelena):")
+        self.z_label = QLabel("Z (Plava):")
 
         self.x_input = QLineEdit()
         self.y_input = QLineEdit()
