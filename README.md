@@ -1,12 +1,58 @@
-# Uvod u robotiku
+# Graph Matching Game
 
-Uvod u robotiku je program koji je napravljen u Python koji ce studentima da pomogne oko resavanja i shvatanja prvog zadatka.
+## Description
+This project is a simple game that allows users to generate random 3D graphs and attempt to match them by manipulating a second graph. It is implemented using Python with PyQt5 for the GUI and OpenGL for rendering the 3D graphics. The main goal of this project is to help other students who have hard time with 3D graphs.
 
-## Instalacija
+## Features
+- Generate random 3D graphs with angles.
+  ```python
+  
+  # angles in easy version [-360, -180, -90, 0, 90, 180, 360]
+  def generate_random_angles(self):
+    self.x_angle = random.choice([-360, -180, -90, 0, 90, 180, 360])
+    self.y_angle = random.choice([-360, -180, -90, 0, 90, 180, 360])
+    self.z_angle = random.choice([-360, -180, -90, 0, 90, 180, 360])
+    self.update()
+  
+  # angles in hard version [-360, -180, -90, -60, -45, -30, 0, 30, 45, 60, 90, 180, 360]
+  def generate_random_angles(self):
+    self.x_angle = random.choice([-360, -180, -90, -60, -45, -30, 0, 30, 45, 60, 90, 180, 360])
+    self.y_angle = random.choice([-360, -180, -90, -60, -45, -30, 0, 30, 45, 60, 90, 180, 360])
+    self.z_angle = random.choice([-360, -180, -90, -60, -45, -30, 0, 30, 45, 60, 90, 180, 360])
+    self.update()
+  
+  ```
+- Manipulate a second graph to match the generated random graph.
+- Graphical representation of 3D axes (X, Y, Z).
+- Check if the two graphs match.
 
-Nije potrebna nikakva instalacija, dovoljno je samo da klonirate ovaj sadrzaj i u folderu <b>dist</b> imate dve verzije aplikacije (<b>easy.exe</b> i <b>hard.exe</b>).
+## Requirements
+- Python 3.x
+- PyQt5
+- PyOpenGL
 
-```bash
-git clone https://github.com/darkogligorijevic/uvod-u-robotiku.git
-```
-Srecno!
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/graph-matching-game.git
+   ```
+2. Install the required dependencies:
+   ```bash
+   pip install PyQt5 PyOpenGL
+   ```
+
+## Usage
+1. Run the scripts (easy.py and hard.py):
+   ```bash
+   py easy.py
+   py hard.py
+   ```
+2. Use the "Generate Random Graph" button to generate a random 3D graph.
+3. Manipulate the second graph to match the generated graph.
+4. Have fun while learning!
+
+## Contributing
+Contributions are welcome! Feel free to open issues or pull requests.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
