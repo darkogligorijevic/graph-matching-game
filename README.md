@@ -56,11 +56,11 @@ This project is a simple game that allows users to generate random 3D graphs and
 1. **Download:** Clone the repository or download the `.zip` file.
 2. **Extract Files:** If you downloaded the `.zip` file, extract its contents to a location of your choice.
 3. **Run the Executable:**
-    - For Windows: Go to `./dist` folder and double-click on the `easy.exe` or `hard.exe` file.
-    - For other platforms: Provide instructions specific to the operating system.
+    - Go to `./dist` folder and double-click on the `easy.exe` or `hard.exe` file.
+
 
 ## Contributing
 Contributions are welcome! Feel free to open issues or pull requests.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the LICENSE() file for details.
