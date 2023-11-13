@@ -42,6 +42,7 @@ This project is a simple game that allows users to generate random 3D graphs and
    ```
 
 ## Usage
+### If you want to explore more with python code:
 1. Run the scripts (easy.py and hard.py):
    ```bash
    py easy.py
@@ -50,6 +51,13 @@ This project is a simple game that allows users to generate random 3D graphs and
 2. Use the "Generate Random Graph" button to generate a random 3D graph.
 3. Manipulate the second graph to match the generated graph.
 4. Have fun while learning!
+
+### If you want to run it rigt away:
+1. **Download:** Clone the repository or download the `.zip` file.
+2. **Extract Files:** If you downloaded the `.zip` file, extract its contents to a location of your choice.
+3. **Run the Executable:**
+    - For Windows: Go to `./dist` folder and double-click on the `easy.exe` or `hard.exe` file.
+    - For other platforms: Provide instructions specific to the operating system.
 
 ## Contributing
 Contributions are welcome! Feel free to open issues or pull requests.
