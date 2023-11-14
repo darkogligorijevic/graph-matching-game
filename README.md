@@ -34,7 +34,7 @@ This project is a simple game that allows users to generate random 3D graphs and
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/graph-matching-game.git
+   git clone https://github.com/darkogligorijevic/graph-matching-game.git
    ```
 2. Install the required dependencies:
    ```bash
