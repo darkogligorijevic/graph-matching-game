@@ -1,7 +1,6 @@
 import sys
 import random
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QVBoxLayout, QPushButton, QOpenGLWidget, QSizePolicy
-from PyQt5.QtCore import Qt
 from OpenGL.GL import *
 from OpenGL.GLU import gluPerspective
 
@@ -28,24 +27,31 @@ class AxisWidget(QOpenGLWidget):
         glRotatef(self.y_angle, 0, 1, 0)
         glRotatef(self.z_angle, 0, 0, 1)
 
+        # X-axis (Red)
         glBegin(GL_LINES)
         glColor3f(1, 0, 0)
         glVertex3f(0, 0, 0)
-        glVertex3f(1, 0, 0)  # X-axis
+        glVertex3f(1, 0, 0)
+        glEnd()  
 
+        # Y-axis (Green)
+        glBegin(GL_LINES)
         glColor3f(0, 1, 0)
         glVertex3f(0, 0, 0)
-        glVertex3f(0, 1, 0)  # Y-axis
+        glVertex3f(0, 1, 0) 
+        glEnd()
 
+        # Z-axis (blue)
+        glBegin(GL_LINES)
         glColor3f(0, 0, 1)
         glVertex3f(0, 0, 0)
-        glVertex3f(0, 0, 1)  # Z-axis
+        glVertex3f(0, 0, 1) 
         glEnd()
 
     def generate_random_angles(self):
-        self.x_angle = random.uniform(-360, 360)
-        self.y_angle = random.uniform(-360, 360)
-        self.z_angle = random.uniform(-360, 360)
+        self.x_angle = random.choice([-360, -180, -90, -60, -45, -30, 0, 30, 45, 60, 90, 180, 360])
+        self.y_angle = random.choice([-360, -180, -90, -60, -45, -30, 0, 30, 45, 60, 90, 180, 360])
+        self.z_angle = random.choice([-360, -180, -90, -60, -45, -30, 0, 30, 45, 60, 90, 180, 360])
         self.update()
 
 class MainWindow(QWidget):
@@ -61,9 +67,9 @@ class MainWindow(QWidget):
         self.generate_button = QPushButton("Generate Random Graph")
         self.generate_button.clicked.connect(self.generate_random_graph)
 
-        self.x2_label = QLabel("X (Red):")
-        self.y2_label = QLabel("Y (Green):")
-        self.z2_label = QLabel("Z (Blue):")
+        self.x2_label = QLabel("X (Crvena):")
+        self.y2_label = QLabel("Y (Zelena):")
+        self.z2_label = QLabel("Z (Plava):")
 
         self.x2_input = QLineEdit()
         self.y2_input = QLineEdit()

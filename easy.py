@@ -1,7 +1,6 @@
 import sys
 import random
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QVBoxLayout, QPushButton, QOpenGLWidget, QSizePolicy
-from PyQt5.QtCore import Qt
 from OpenGL.GL import *
 from OpenGL.GLU import gluPerspective
 
@@ -28,18 +27,25 @@ class AxisWidget(QOpenGLWidget):
         glRotatef(self.y_angle, 0, 1, 0)
         glRotatef(self.z_angle, 0, 0, 1)
 
+        # X-axis (Red)
         glBegin(GL_LINES)
         glColor3f(1, 0, 0)
         glVertex3f(0, 0, 0)
-        glVertex3f(1, 0, 0)  # X-axis
+        glVertex3f(1, 0, 0)
+        glEnd()  
 
+        # Y-axis (Green)
+        glBegin(GL_LINES)
         glColor3f(0, 1, 0)
         glVertex3f(0, 0, 0)
-        glVertex3f(0, 1, 0)  # Y-axis
+        glVertex3f(0, 1, 0) 
+        glEnd()
 
+        # Z-axis (blue)
+        glBegin(GL_LINES)
         glColor3f(0, 0, 1)
         glVertex3f(0, 0, 0)
-        glVertex3f(0, 0, 1)  # Z-axis
+        glVertex3f(0, 0, 1) 
         glEnd()
 
     def generate_random_angles(self):
