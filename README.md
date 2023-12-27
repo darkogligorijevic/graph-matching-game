@@ -56,7 +56,7 @@ This project is a simple game that allows users to generate random 3D graphs and
 1. **Download:** Clone the repository or download the `.zip` file.
 2. **Extract Files:** If you downloaded the `.zip` file, extract its contents to a location of your choice.
 3. **Run the Executable:**
-    - Go to `./dist` folder and double-click on the `easy.exe` or `hard.exe` file.
+    - Double-click on the `easy.exe` or `hard.exe` file.
 
 
 ## Contributing
